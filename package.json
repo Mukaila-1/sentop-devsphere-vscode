@@ -1,0 +1,94 @@
+{
+  "name": "sentop-devsphere",
+  "displayName": "Sentop DevSphere",
+  "description": "AI code generation, one-click deployment, and platform services — directly in VS Code. Powered by Sentop Solution Limited, United Kingdom.",
+  "version": "0.1.0",
+  "publisher": "sentop",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "AI",
+    "Other",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "AI",
+    "code generation",
+    "deployment",
+    "Sentop",
+    "DevSphere"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mukaila-1/sentop-devsphere-vscode"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sentop.signIn",
+        "title": "Sign In",
+        "category": "Sentop DevSphere"
+      },
+      {
+        "command": "sentop.signOut",
+        "title": "Sign Out",
+        "category": "Sentop DevSphere"
+      },
+      {
+        "command": "sentop.generateCode",
+        "title": "Generate AI Code",
+        "category": "Sentop DevSphere"
+      },
+      {
+        "command": "sentop.viewCredits",
+        "title": "View Credit Balance",
+        "category": "Sentop DevSphere"
+      },
+      {
+        "command": "sentop.openProject",
+        "title": "Open Project",
+        "category": "Sentop DevSphere"
+      },
+      {
+        "command": "sentop.deploy",
+        "title": "Deploy to Hosting",
+        "category": "Sentop DevSphere"
+      }
+    ],
+    "configuration": {
+      "title": "Sentop DevSphere",
+      "properties": {
+        "sentop.apiBaseUrl": {
+          "type": "string",
+          "default": "https://sentop.tech",
+          "description": "Base URL of your Sentop DevSphere instance."
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "sentop.generateCode",
+        "key": "ctrl+shift+g",
+        "mac": "cmd+shift+g",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx @vscode/vsce package",
+    "publish": "npx @vscode/vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0"
+  }
+}
