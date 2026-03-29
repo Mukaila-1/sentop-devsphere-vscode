@@ -1,28 +1,38 @@
 {
   "name": "sentop-devsphere",
   "displayName": "Sentop DevSphere",
-  "description": "AI code generation, one-click deployment, and platform services — directly in VS Code. Powered by Sentop Solution Limited, United Kingdom.",
+  "description": "AI code generation, one-click deployment, and cloud project management — directly in VS Code. Powered by Sentop Solution Limited, United Kingdom.",
   "version": "0.1.0",
   "publisher": "sentop",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
     "AI",
-    "Other",
-    "Programming Languages"
+    "Programming Languages",
+    "Other"
   ],
   "keywords": [
     "AI",
     "code generation",
+    "cloud IDE",
     "deployment",
     "Sentop",
     "DevSphere"
   ],
+  "galleryBanner": {
+    "color": "#0f172a",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Mukaila-1/sentop-devsphere-vscode"
   },
+  "bugs": {
+    "url": "https://github.com/Mukaila-1/sentop-devsphere-vscode/issues"
+  },
+  "homepage": "https://sentop.tech",
   "activationEvents": [
     "onStartupFinished"
   ],
@@ -82,8 +92,8 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "package": "npx @vscode/vsce package",
-    "publish": "npx @vscode/vsce publish"
+    "package": "npx @vscode/vsce package --no-dependencies",
+    "publish": "npx @vscode/vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
